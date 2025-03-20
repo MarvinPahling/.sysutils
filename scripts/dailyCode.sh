@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 
-
 date_string=$(date -I)
 todays_path=~/dailyCode/days/$date_string/
 if [ -d "$todays_path" ] 
 then
   echo "path: $todays_path does already exist"
-  cd $todays_path 
+  cd $todays_path/projects 
 else
   echo "path: $todays_path does not already exist"
   mkdir $todays_path
