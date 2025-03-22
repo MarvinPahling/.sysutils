@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-alias daily="source ~/.sysutils/scripts/dailyCode.sh"
-alias fastbun="source ~/.sysutils/scripts/fastBun.sh"
+alias daily="source ~/.sysutils/scripts/daily_code.sh"
+alias fastbun="source ~/.sysutils/scripts/fast_bun.sh"

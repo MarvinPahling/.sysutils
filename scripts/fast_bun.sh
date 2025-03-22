@@ -8,8 +8,11 @@ start_tmux_session() {
   bun init -y
   bun add eslint @eslint/js typescript-eslint jiti
   cp ~/.sysutils/scripts/files/eslint.config.mts .
+  rm -f index.ts
+  cp ~/.sysutils/scripts/files/fastbun.ts ./index.ts
 
   tmux kill-session -t "$local_project_name" 2>/dev/null || true
+  sleep 1
   tmux new-session -d -s "$local_project_name" 'nvim index.ts'
   tmux split-window -h -t "$local_project_name" -h
   tmux send-keys -t "$local_project_name" "bun run --watch index.ts" C-m
@@ -19,7 +22,7 @@ start_tmux_session() {
 }
 
 project_name=""
-if ! [ $# -le 1 ]
+if ! [ $# = 1 ]
 then
   echo "arguments passed: $#"
   project_name=$(date '+%Y-%m-%d-%H-%M-%S')
