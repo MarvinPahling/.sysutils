@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
-source ~/.sysutils/scripts/backup_dotfiles.sh
-alias daily="source ~/.sysutils/scripts/daily_code.sh"
-alias fastbun="source ~/.sysutils/scripts/fast_bun.sh"
+# scripts - add functions which can be executed in the background
+scripts_path="$HOME/.sysutils/scripts"
+source "$scripts_path/backup-dotfiles.sh"
+
+# workflows - can be sourced in the current session to automate workflows 
+workflow_path="$HOME/.sysutils/workflows"
+alias daily="source $workflow_path/daily-code.sh"
+alias fastbun="source $workflow_path/fast-bun.sh"
 

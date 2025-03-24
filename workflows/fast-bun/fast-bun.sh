@@ -7,9 +7,9 @@ start_tmux_session() {
   cd $local_project_path || return 1
   bun init -y
   bun add eslint @eslint/js typescript-eslint jiti
-  cp ~/.sysutils/scripts/files/eslint.config.mts .
+  cp ~/.sysutils/workflows/fast-bun/eslint.config.mts .
   rm -f index.ts
-  cp ~/.sysutils/scripts/files/fastbun.ts ./index.ts
+  cp ~/.sysutils/workflows/fast-bun/fastbun.ts ./index.ts
 
   tmux kill-session -t "$local_project_name" 2>/dev/null || true
   sleep 1
