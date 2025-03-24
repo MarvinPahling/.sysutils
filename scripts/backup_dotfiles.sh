@@ -11,7 +11,7 @@ backup_repo() {
   git push origin main
 }
 
-repos=("$HOME/dotfiles" "$HOME/.config/nvim" "$HOME/.sysutils")
+repos=("$HOME/.config/nvim" "$HOME/.sysutils" "$HOME/dotfiles")
 
 for repo in "${repos[@]}"
 do
