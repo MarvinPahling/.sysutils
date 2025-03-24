@@ -10,7 +10,7 @@ else
   echo "path: $todays_path does not already exist"
   mkdir $todays_path
   touch $todays_path/task.md
-  mkdir $todays_path/projects
+  mkdir -p $todays_path/projects
   cd $todays_path 
   nvim $todays_path/task.md
 fi
