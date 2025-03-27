@@ -6,6 +6,6 @@ source "$scripts_path/backup-dotfiles.sh"
 
 # workflows - can be sourced in the current session to automate workflows 
 workflow_path="$HOME/.sysutils/workflows"
-alias daily="source $workflow_path/daily-code.sh"
+alias daily="source $workflow_path/daily-code/daily-code.sh"
 alias fastbun="source $workflow_path/fast-bun.sh"
 
